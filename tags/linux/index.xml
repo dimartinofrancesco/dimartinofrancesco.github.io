@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on tail -f note.md</title>
+    <link>http://dimartinofrancesco.github.io/tags/linux/</link>
+    <description>Recent content in linux on tail -f note.md</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-it</language>
+    <lastBuildDate>Wed, 02 Sep 2020 01:30:28 +0200</lastBuildDate>
+    
+	<atom:link href="http://dimartinofrancesco.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Abilitare la webcam del MacBook Pro su Ubuntu 20.04</title>
+      <link>http://dimartinofrancesco.github.io/posts/macbook-webcam-ubutu-20/</link>
+      <pubDate>Wed, 02 Sep 2020 01:30:28 +0200</pubDate>
+      
+      <guid>http://dimartinofrancesco.github.io/posts/macbook-webcam-ubutu-20/</guid>
+      <description>Sto migrando da OSX a Linux sul mio MacBook e questo è uno dei primi problemi che ho dovuto risolvere.</description>
+    </item>
+    
+    <item>
+      <title>Front-end dev - da OSX a Linux</title>
+      <link>http://dimartinofrancesco.github.io/posts/front-end-migrare-da-osx-a-linux/</link>
+      <pubDate>Tue, 01 Sep 2020 00:38:47 +0200</pubDate>
+      
+      <guid>http://dimartinofrancesco.github.io/posts/front-end-migrare-da-osx-a-linux/</guid>
+      <description>Il primo impatto con un desktop enviroment Linux Oggi tutti gli sviluppatori, anche quelli front-end, utilizzano il terminale e le più svariate CLI: caricano file, pacchettizzano progetti, configurano traspiler per compilare codice, per rilasciarlo e testarlo.</description>
+    </item>
+    
+  </channel>
+</rss>

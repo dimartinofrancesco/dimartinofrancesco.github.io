@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="it-it">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>Front-end dev - da OSX a Linux | tail -f note.md</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF3DB4">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    
+    
+    <link rel="stylesheet" href="http://dimartinofrancesco.github.io/css/main.min.15431d6c334f65809fe2bc329da3f2c81c6e3027ab1e25b56afb2bb85fa7fd64.css"/>
+
+    
+    
+    
+
+    
+    
+ 
+    </head>
+
+    <body>
+        
+<nav>
+  <header>
+    <div class="site-title">
+        <a href="/">tail -f note.md</a>
+    </div>  
+</header>
+
+  <div class="nav-menu">
+  
+    <a class="color-link nav-link" href="/about/">About</a>
+  
+    <a class="color-link nav-link" href="/tags/">Tags</a>
+  
+    <a class="color-link nav-link" href="/archives/">Archives</a>
+  
+  <a class="color-link nav-link" href="http://dimartinofrancesco.github.io/index.xml" target="_blank" rel="noopener" type="application/rss+xml">RSS</a>
+</div>
+<footer class="footer">
+	<div class="social-icons">
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <a class="social-icon" href="https://www.linkedin.com/in/francesco-di-martino-b1604635/" target="_blank" rel="noopener" title="LinkedIn">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M2,3.654102 C2,2.69908141 2.79442509,1.92397846 3.77383592,1.92397846 L24.2261641,1.92397846 C25.2058917,1.92397846 26,2.69908141 26,3.654102 L26,24.3462148 C26,25.3015521 25.2058917,26.0760215 24.2261641,26.0760215 L3.77383592,26.0760215 C2.79442509,26.0760215 2,25.3015521 2,24.3465315 L2,3.65378524 L2,3.654102 Z M9.27526132,22.1415901 L9.27526132,11.2356668 L5.65030092,11.2356668 L5.65030092,22.1415901 L9.27557808,22.1415901 L9.27526132,22.1415901 Z M7.46341463,9.74691162 C8.72727273,9.74691162 9.51409566,8.90940767 9.51409566,7.86284447 C9.49033893,6.79252455 8.72727273,5.97846056 7.48748812,5.97846056 C6.24675325,5.97846056 5.43649034,6.79252455 5.43649034,7.86284447 C5.43649034,8.90940767 6.22299652,9.74691162 7.4396579,9.74691162 L7.46309788,9.74691162 L7.46341463,9.74691162 Z M11.2815965,22.1415901 L14.9062401,22.1415901 L14.9062401,16.0519481 C14.9062401,15.7263225 14.9299968,15.4000634 15.0256573,15.1675641 C15.2876148,14.5159962 15.8840672,13.8416218 16.8856509,13.8416218 C18.1970225,13.8416218 18.7218879,14.8416218 18.7218879,16.3078872 L18.7218879,22.1415901 L22.3465315,22.1415901 L22.3465315,15.8885017 C22.3465315,12.5388027 20.5584416,10.9800443 18.1735825,10.9800443 C16.2182452,10.9800443 15.3595185,12.072854 14.8824834,12.8172315 L14.9065569,12.8172315 L14.9065569,11.2359835 L11.2819132,11.2359835 C11.3291099,12.2591067 11.2815965,22.1419069 11.2815965,22.1419069 L11.2815965,22.1415901 Z"></path>
+        </svg>
+    </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <a class="social-icon" href="https://github.com/dimartinofrancesco" target="_blank" rel="noopener" title="GitHub">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M13.9988029,1.32087331 C6.82105037,1.32087331 1,7.14112562 1,14.3212723 C1,20.0649109 4.72454649,24.9370678 9.89038951,26.6560892 C10.5408085,26.7757983 10.7778323,26.374374 10.7778323,26.0296121 C10.7778323,25.7215609 10.7666595,24.9035493 10.760275,23.8189856 C7.14426471,24.6042767 6.38131925,22.0760223 6.38131925,22.0760223 C5.78995672,20.5740732 4.93762853,20.1742451 4.93762853,20.1742451 C3.75729765,19.3682044 5.02701126,19.3841656 5.02701126,19.3841656 C6.33183953,19.4759425 7.01817121,20.7241085 7.01817121,20.7241085 C8.17775254,22.7104801 10.0611744,22.1366749 10.8017741,21.8038838 C10.919887,20.9643246 11.2558703,20.3913175 11.6269683,20.066507 C8.74038491,19.7385043 5.70536235,18.6228163 5.70536235,13.6413251 C5.70536235,12.2223743 6.21213051,11.0611968 7.04370914,10.1530044 C6.90963504,9.82420367 6.46351945,8.50181809 7.17139875,6.71256734 C7.17139875,6.71256734 8.26234691,6.36301702 10.7459099,8.04532771 C11.78259,7.75642995 12.8950858,7.61277914 14.000399,7.60719272 C15.1049142,7.61277914 16.2166119,7.75642995 17.2548881,8.04532771 C19.736855,6.36301702 20.8262071,6.71256734 20.8262071,6.71256734 C21.5356825,8.50181809 21.0895669,9.82420367 20.9562909,10.1530044 C21.7894656,11.0611968 22.2922435,12.2223743 22.2922435,13.6413251 C22.2922435,18.6355852 19.2524325,19.734514 16.3570705,20.0561322 C16.8231376,20.4575564 17.2389269,21.2508282 17.2389269,22.4638795 C17.2389269,24.2012564 17.2229657,25.603448 17.2229657,26.0296121 C17.2229657,26.3775663 17.4575954,26.7821827 18.116793,26.6552912 C23.2786458,24.9322794 27,20.0633148 27,14.3212723 C27,7.14112562 21.1789496,1.32087331 13.9988029,1.32087331"></path>
+        </svg>
+    </a>
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+
+
+	<p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
+	<p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
+
+	<script src="http://dimartinofrancesco.github.io/js/main.min.fa5c2b23e07b5d9bfad267a52b4b24fdb053e6fb7524993383594926a3ac270c.js" integrity="sha256-+lwrI+B7XZv60melK0sk/bBT5vt1JJkzg1lJJqOsJww=" crossorigin="anonymous"></script>
+</footer>
+</nav>
+
+        <div id="content" class="content-container">
+        
+
+<h1 class="post-title">Front-end dev - da OSX a Linux</h1>
+    
+    <time>September 1, 2020</time>
+    
+    <div>
+        <p>
+        <p><img src="https://media.giphy.com/media/EP3Ju1Tpi0VAA/giphy.gif" alt=""></p>
+<h1 id="il-primo-impatto-con-un-desktop-enviroment-linux">Il primo impatto con un desktop enviroment Linux</h1>
+<p>Oggi tutti gli sviluppatori, anche quelli front-end, utilizzano il terminale e le più svariate CLI: caricano file, pacchettizzano progetti, configurano traspiler per compilare codice, per rilasciarlo e testarlo.</p>
+<p>Parlo del Terminale Linux ovviamente che è tanto utilizzato e richiesto da far cedere anche Microsoft che ha rilasciato <a href="https://docs.microsoft.com/it-it/windows/wsl/install-win10">WLS</a> su Windows - pur di non perdere utenti -</p>
+<p>Linux, utilizzato tramite terminale, è familiare a molti ma <strong>è davvero possibile abbandonare, in ambito lavorativo, il rassicuramente ambiente OSX per un desktop environment linux?</strong></p>
+<p>Lo scoprirò nei prossimi mesi e questo sito oggi nasce come tacchuino per appuntare tutte le procedure, assurde, necessarie per ottenere quelle funzionalità scontate per un utente OSX&hellip; sperando di annotare, domani, quelle che un utente OSX può, per ora, desiderare.</p>
+<h2 id="perchè-ubuntu-su-un-macbook-pro">Perchè Ubuntu su un MacBook pro?</h2>
+<p>Il mio MacBook - early 2015 -, nonostante i suoi 16GB di RAM non regge più Docker - che diciamoci la verità non è poi tanto ottimizzato per OSX - così in pieno lockdown ho deciso di acquistare un nuovo mac: un mac mini. (<em>Per i nerd: i7 con 6 core / 1TB SSD / 32 GB di Ram montati in autonomia</em>)</p>
+<p>Ho scelto il mac Mini un po&rsquo; di getto, un po&rsquo; per dei motivi che dopo mesi di utilizzo ritengo ancora validi:</p>
+<ul>
+<li>Non volevo cedere al ricatto di mamma Apple che mi obbligava a spendere circa 3.000 euro per avere un laptop performante che avesse un disco e quantità di RAM adeguata</li>
+<li>In ufficio ed a casa utilizzo sempre il MacBook chiuso collegato a due monitor rigorosamente con schermo opaco</li>
+<li>Gli ultimi 3 MacBook hanno tutti avuto un problema di progettazione che Apple ha ammesso solo dopo anni e che in ogni caso non ha mai risolto del tutto. Il più grave con il Macbook Pro 15&rdquo; del 2011 dove era necessario effettuare un reballing della scheda video ogni 6 mesi - quello meno grave è il problema dell&rsquo;attuale 13&rdquo; con l&rsquo;antiglare che va via e che si ripresenta anche dopo la sostituzione (la soluzione definitiva è eliminarlo del tutto con una salvietta per bimbi).</li>
+</ul>
+<p>Per ora lo consiglio, anche con un gran caldo, ad esempio, non va in throttling e se siete a corto di fornelli potete tranquillamente adagiarci una padella e cuocere una frittata (quando avete 4 o più istanze docker attive).</p>
+<p><strong>Per non dilungarmi ancora, ho scelto di installare linux sul mio MacBook per dargli nuova vita lavorativa ed utilizzarlo in mobilità</strong> e non solo come un grande tablet da gabinetto :)</p>
+<h2 id="la-scelta-della-distribuzione">La scelta della distribuzione</h2>
+<p>Alla tenera età di 15 anni installai la mia prima distro linux, era una <strong>RedHat</strong>, ricordo ancora le assurde domande dell&rsquo;installazione &ldquo;guidata&rdquo;.</p>
+<blockquote>
+<p>Una distro linux una volta mi chiese quanti &ldquo;cilindri&rdquo; aveva l&rsquo;HD!</p>
+</blockquote>
+<p><img src="http://ftp.kh.edu.tw/Linux/Redhat/en_6.2/doc/ref-guide/figs/textmode/dd-add.gif" alt="RedHat installazione"></p>
+<p><a href="http://ftp.kh.edu.tw/Linux/Redhat/en_6.2/doc/ref-guide/s1-install-create-part.htm">Fonte: kh.edu.tw</a></p>
+<p>Tutto l&rsquo;hardware funzionava in una sorta di super modalità provvisoria (ricordatevi che tutta la letteratura disponibile era la rivista alla quale era abbinato il cd-rom contente la distro&hellip; dimenticate StackOverflow) in quanto la maggior parte dei driver era generico.</p>
+<p>Oggi, non avendo più così tanto tempo, dopo aver visto e rivisto recensioni di distro, commenti ed altro ho optato per quella che doveva essere una distro &ldquo;Out of the box&rdquo;&hellip; Insomma la classica procedura &ldquo;avanti avanti avanti accetto e giuro di aver letto tutta la licenza e le condizioni&rdquo; e funziona tutto.</p>
+<p>Ho scelto <strong>Ubuntu</strong>, e l&rsquo;ho scelta perché è la distro che utilizzo sulla maggior parte delle istanze server (EC, DigitalOcean&hellip;). Dalla mia avevo un po&rsquo; di familiarità con il package manager, firewall e qualche altro trick.</p>
+<h2 id="ubuntu-gnome-e-la-prima-impressione">Ubuntu, GNOME e la prima impressione</h2>
+<p>Dopo il trauma della RedHat anni 90 mi aspettavo davvero tanti problemi di compatibilità come una risoluzione improbabile dello schermo, il wifi che non funziona o ancora il bluetooth non rilevato. Così quando ho visto la live version sbrilluccicare stavo per piallare tutto ed installare Ubuntu come unico sistema.
+Fortunatamente ho desistito, ricordadomi dei vari progammi che girano solo su mac, e ho optato per un classico Dual Boot.</p>
+<blockquote>
+<p>E pensare che quando passai al Mac il problema erano i programmi che giravano solo su Windows</p>
+</blockquote>
+<h3 id="wow-funziona-davvero-tutto">Wow funziona davvero tutto!</h3>
+<p><img src="https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif" alt=""></p>
+<p>Dopo l&rsquo;installazione ero soddisfatto, chrome sembrava davvero lento ma nulla di tragico. <strong>C'è anche un&rsquo;app store simil Apple!</strong>  e subito mi era stato suggerito Visual Studio Code dallo store.</p>
+<blockquote>
+<p>Insomma sembrava davvero che linux non era più quello che ricordavo! Addio make, make install, .configure, chmod +x&hellip; &ldquo;GNOME è tutta un&rsquo;altra storia&rdquo; mi dicevo</p>
+</blockquote>
+<p>Sono ritornato al lavoro preso dalle scadenze pre-ferie ed ho abbandono il MacBook. L&rsquo;ho riacceso dopo circa un mese ed avendo dimenticato la password ho installato nuovamente ubuntu. <strong>L&rsquo;installazione dura davvero 10 minuti ed è intuitiva</strong></p>
+<h2 id="e-tempo-di-vacanza-è-tempo-di-lasciare-lormai-fido-macmini-in-panchina">E&rsquo; tempo di vacanza è tempo di lasciare l&rsquo;ormai fido macMini in panchina</h2>
+<p>E&rsquo; ora di partire e quindi di installare tutto quello che mi può servire sulla mia scintillante installazione di Ubuntu.</p>
+<ul>
+<li>Aggiungo le chiavi ssh alle instanze DigitalOcean</li>
+<li>Evito DataGrip e PhpStorm per ora, miei fidi compagni di viaggio</li>
+<li>Scaricare i git sui quali sto lavorando
+mentre faccio la lista, rassicurato dal Dual Boot mi propongo di lavorare già su Ubuntu qualche ora, giusto per abituarmi&hellip;</li>
+</ul>
+<h3 id="docker">Docker</h3>
+<p>Apro &ldquo;l&rsquo;app store&rdquo; che in realtà si chiama &ldquo;Ubuntu Software&rdquo; e cerco Docker, non c'è&hellip; sarà un caso, installo via terminale.</p>
+<p>Trovo <a href="https://www.lffl.org/2020/04/guida-docker-su-ubuntu-20-04.html">questa guida</a> (primo risultato di google digitando docker ubutu 20.04), la seguo tutta meno dove consiglia di inserire il proprio utente nel gruppo di Admin per evitare di eseguire i comandi docker sempre con sudo.
+Pare che nel prossimo rilascio di docker non sia più necessario e poi non mi va di iniziare con un &ldquo;pezzotto&rdquo;</p>
+<p>Vengo ripagato dopo le prime esecuzioni&hellip; Il MacBook non è più un vecchio 486 e quando avvio 3/4 instaze docker contemporaneante (mysql, mariadb, apache e node) tutto sembra funzionare senza problemi e soprattuto Ventole al massimo.</p>
+<h3 id="webcam---si-non-funziona-out-of-the-box">Webcam - Si, non funziona out of the box</h3>
+<p><img src="https://media.giphy.com/media/5Zesu5VPNGJlm/giphy.gif" alt=""></p>
+<p>Nell&rsquo;ultimo mese sto lavorando ad un paio di progetti che utilizzano il protocollo WebRTC, inizio subito a lavorare su uno attivo che rilascerò lunedì e sul quale sicuramente dovrò spendere qualche minuto in vacanza.</p>
+<p>Lancio docker-compose, tutto fila liscio, apro il browser e chrome mi chiede di autorizzare l&rsquo;accesso al solo microfono&hellip;
+Ubuntu non ha rilevato la webcam!</p>
+<p><em>&ldquo;Google it! ed in un paio di minuti risolvo&rdquo;</em>, questo è quello che ho pensato&hellip; i minuti saranno circa 30 e vi/mi lascio qui le istruzioni: <a href="/linux/macbook-webcam-ubutu-20/">Abilitare la webcam del macbook su Ubuntu 20.04</a></p>
+<h3 id="tastiera-lostacolo-più-grande">Tastiera, l&rsquo;ostacolo più grande</h3>
+<p><strong>Iniziamo dai problemi soft:</strong></p>
+<p>Probabilmente avrò sbagliato io a scegliere la tastiera in fase di installazione, ma immagino che sia proprio una mappatura diversa di linux &ndash; e si immagino ci sia un file di configurazione da qualche parte che mi permette di personalizzare ogni singola combinazione di tasti e lo scoprirò &ndash;, ma dopo l&rsquo;illusione giustificata dall&rsquo;aver visto che funzionavano perfino i tasti per regolare la luminosità della tastiera perchè la ~ è sul tasto ^ ed il ` è sul tasto &lsquo;?
+Sto riempiendo la shell di ½ (alt + 5, ovvero la ~ su mac).</p>
+<p><strong>e veniamo al dramma:</strong></p>
+<p>Copia, incolla, inizio, fine, nuova scheda, nuova finestra ed ancor di più cambio applicazione&hellip;</p>
+<blockquote>
+<p>Il programmatore Mac ha praticamente il pollice incollato al tasto cmd</p>
+</blockquote>
+<p>All&rsquo;inizio mi illudo che posso risolvere tutto con <em>gnome-tweak-tool</em>. Ci sono a disposizione un bel po&rsquo; di opzioni, provo prima ad alternare ctrl ed alt ed alt e cmd, poi opto per un più brutale <em>ctrl is mapped to Win (cmd o per i nostargici &ldquo;tasto mela&rdquo;) and the usual ctrl keys</em>&hellip; in pratica cmd diventa ctrl e ctrl resta ctrl&hellip;</p>
+<p>Capisco dopo poco che il tasto Super aveva un senso, che tutto quello che si fa su mac con Cmd su Linux/Windows lo si fa in parte con ctrl e in parte con alt e che quindi in ogni caso dovrei riabituarmi all&rsquo;uso di buona parte degli shortcut&hellip; <strong>ritorno alla mappatura nativa</strong></p>
+<p><strong>Caro Linus, Crtl + C - perchè&hellip; perché?</strong>
+Qui si vede che Mac in tema di usabilità ha una marcia in più. Se hai mappato Ctrl + C come chiudi processo, sul terminale, perchè non usi super + C per copiare? e mi costringi a fare copia nel terminale con Ctrl + C + Shift?</p>
+<p>Chiaramente vale lo stesso anche per incolla Ctrl + shift + V. Il vostro terminale sarà una sequenza di ^C e ^V</p>
+<p>In poche ore ho rivissuto il dramma del passaggio da windows a mac&hellip;</p>
+<h3 id="linux--logitech-cippalippa">Linux + logitech&hellip; CIPPALIPPA!</h3>
+<p><img src="https://media.giphy.com/media/dwWeyfOCKSptC/giphy.gif" alt=""></p>
+<p>Cippalippa&hellip; CIPPA LIPPA! Caro Linux ho pensato di fregarti scaricando al volo l&rsquo;app di Logitech per mappare i tasti del mouse ed utilizzare, così come già faccio sul mac, i tastini con le frecce per fare copia ed incolla.</p>
+<p>Apro Ubuntu Software e non c'è, penso che sicuramente Logitech che sposorizza le sue tastiere come &ldquo;tastiere per programmare&rdquo; avrà la sua applicazione sul suo sito web&hellip; Logitech.it -&gt; Supporto.. niente.</p>
+<p>Alla fine con un paio di ricerche su google risolvo ma quanta fatica per una cosa così semplice e soprattutto quanta nostalgia!
+Qui vi/mi lascio le istruzioni per <a href="https://www.google.it">Mappare i tasti del mouse logitech su Ubuntu</a></p>
+<h2 id="conclusione-della-giornata">Conclusione&hellip; della giornata</h2>
+<p>Tra una build e l&rsquo;altra queste prime ore di sviluppo su Ubuntu mi fanno pensare che <strong>il problema più grande per ora non è l&rsquo;assenza di Keynote o della suite Adobe - che utilizzo sempre più di rado - ma è l&rsquo;abitudine al layout della tastiera e soprattutto l&rsquo;abitudine alle shortcut</strong> (anche ora cliccando cmd + freccia sinistra ho attivato il tile manager).</p>
+<p>Cosciente che dovrò crearmi un repository dove caricare tutti i file di configurazione, che pian piano personalizzerò se questa avventura continuerà, colgo l&rsquo;occasione di <a href="https://www.gggg.it">provare HUGO</a> con il quale sto scrivendo questo primo grande appunto che probabilmente caricherò da qualche parte.</p>
+<p><img src="https://media.giphy.com/media/65WGIINB4VfA1JuXCH/giphy.gif" alt=""></p>
+
+        </p>
+    </div>
+    
+
+    
+
+    <div class="page-footer">
+        
+        <hr class="footer-divider">
+        
+            <a class="tag" href="/tags/linux">#linux</a>
+        
+            <a class="tag" href="/tags/osx">#osx</a>
+        
+            <a class="tag" href="/tags/front-end">#front-end</a>
+        
+            <a class="tag" href="/tags/developer">#developer</a>
+        
+            <a class="tag" href="/tags/ubuntu">#ubuntu</a>
+        
+      
+    </div>
+
+
+        
+
+<link rel="stylesheet" type="text/css" href="/css/katex.min.css" crossorigin="anonymous">
+<script type="text/javascript" src="/js/katex.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/auto-render.min.js"onload="renderMathInElement(document.body);" crossorigin="anonymous"></script>
+
+        </div>
+        <footer class="footer-mobile">
+	<div class="social-icons">
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <a class="social-icon" href="https://www.linkedin.com/in/francesco-di-martino-b1604635/" target="_blank" rel="noopener" title="LinkedIn">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M2,3.654102 C2,2.69908141 2.79442509,1.92397846 3.77383592,1.92397846 L24.2261641,1.92397846 C25.2058917,1.92397846 26,2.69908141 26,3.654102 L26,24.3462148 C26,25.3015521 25.2058917,26.0760215 24.2261641,26.0760215 L3.77383592,26.0760215 C2.79442509,26.0760215 2,25.3015521 2,24.3465315 L2,3.65378524 L2,3.654102 Z M9.27526132,22.1415901 L9.27526132,11.2356668 L5.65030092,11.2356668 L5.65030092,22.1415901 L9.27557808,22.1415901 L9.27526132,22.1415901 Z M7.46341463,9.74691162 C8.72727273,9.74691162 9.51409566,8.90940767 9.51409566,7.86284447 C9.49033893,6.79252455 8.72727273,5.97846056 7.48748812,5.97846056 C6.24675325,5.97846056 5.43649034,6.79252455 5.43649034,7.86284447 C5.43649034,8.90940767 6.22299652,9.74691162 7.4396579,9.74691162 L7.46309788,9.74691162 L7.46341463,9.74691162 Z M11.2815965,22.1415901 L14.9062401,22.1415901 L14.9062401,16.0519481 C14.9062401,15.7263225 14.9299968,15.4000634 15.0256573,15.1675641 C15.2876148,14.5159962 15.8840672,13.8416218 16.8856509,13.8416218 C18.1970225,13.8416218 18.7218879,14.8416218 18.7218879,16.3078872 L18.7218879,22.1415901 L22.3465315,22.1415901 L22.3465315,15.8885017 C22.3465315,12.5388027 20.5584416,10.9800443 18.1735825,10.9800443 C16.2182452,10.9800443 15.3595185,12.072854 14.8824834,12.8172315 L14.9065569,12.8172315 L14.9065569,11.2359835 L11.2819132,11.2359835 C11.3291099,12.2591067 11.2815965,22.1419069 11.2815965,22.1419069 L11.2815965,22.1415901 Z"></path>
+        </svg>
+    </a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <a class="social-icon" href="https://github.com/dimartinofrancesco" target="_blank" rel="noopener" title="GitHub">
+        <svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" fill="#ABABAB" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <path d="M13.9988029,1.32087331 C6.82105037,1.32087331 1,7.14112562 1,14.3212723 C1,20.0649109 4.72454649,24.9370678 9.89038951,26.6560892 C10.5408085,26.7757983 10.7778323,26.374374 10.7778323,26.0296121 C10.7778323,25.7215609 10.7666595,24.9035493 10.760275,23.8189856 C7.14426471,24.6042767 6.38131925,22.0760223 6.38131925,22.0760223 C5.78995672,20.5740732 4.93762853,20.1742451 4.93762853,20.1742451 C3.75729765,19.3682044 5.02701126,19.3841656 5.02701126,19.3841656 C6.33183953,19.4759425 7.01817121,20.7241085 7.01817121,20.7241085 C8.17775254,22.7104801 10.0611744,22.1366749 10.8017741,21.8038838 C10.919887,20.9643246 11.2558703,20.3913175 11.6269683,20.066507 C8.74038491,19.7385043 5.70536235,18.6228163 5.70536235,13.6413251 C5.70536235,12.2223743 6.21213051,11.0611968 7.04370914,10.1530044 C6.90963504,9.82420367 6.46351945,8.50181809 7.17139875,6.71256734 C7.17139875,6.71256734 8.26234691,6.36301702 10.7459099,8.04532771 C11.78259,7.75642995 12.8950858,7.61277914 14.000399,7.60719272 C15.1049142,7.61277914 16.2166119,7.75642995 17.2548881,8.04532771 C19.736855,6.36301702 20.8262071,6.71256734 20.8262071,6.71256734 C21.5356825,8.50181809 21.0895669,9.82420367 20.9562909,10.1530044 C21.7894656,11.0611968 22.2922435,12.2223743 22.2922435,13.6413251 C22.2922435,18.6355852 19.2524325,19.734514 16.3570705,20.0561322 C16.8231376,20.4575564 17.2389269,21.2508282 17.2389269,22.4638795 C17.2389269,24.2012564 17.2229657,25.603448 17.2229657,26.0296121 C17.2229657,26.3775663 17.4575954,26.7821827 18.116793,26.6552912 C23.2786458,24.9322794 27,20.0633148 27,14.3212723 C27,7.14112562 21.1789496,1.32087331 13.9988029,1.32087331"></path>
+        </svg>
+    </a>
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+
+
+	<div class="footer-mobile-links">
+		<p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
+		<span class="divider-bar">|</span>
+		<p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
+	</div>
+
+	<script src="http://dimartinofrancesco.github.io/js/main.min.fa5c2b23e07b5d9bfad267a52b4b24fdb053e6fb7524993383594926a3ac270c.js" integrity="sha256-+lwrI+B7XZv60melK0sk/bBT5vt1JJkzg1lJJqOsJww=" crossorigin="anonymous"></script>
+</footer>
+    </body>
+</html>
