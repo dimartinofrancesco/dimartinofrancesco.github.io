@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>prestashop on tail -f note.md</title>
-    <link>http://dimartinofrancesco.github.io/tags/prestashop/</link>
+    <link>https://dimartinofrancesco.github.io/tags/prestashop/</link>
     <description>Recent content in prestashop on tail -f note.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-it</language>
     <lastBuildDate>Thu, 03 Sep 2020 01:30:28 +0200</lastBuildDate>
     
-	<atom:link href="http://dimartinofrancesco.github.io/tags/prestashop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dimartinofrancesco.github.io/tags/prestashop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Prestashop 1.7: cancellare le categorie orfane</title>
-      <link>http://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/</link>
+      <link>https://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/</link>
       <pubDate>Thu, 03 Sep 2020 01:30:28 +0200</pubDate>
       
-      <guid>http://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/</guid>
+      <guid>https://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/</guid>
       <description>Un elenco di query MySql per controllare l&amp;rsquo;esistenza di categorie orfane e le relative query per la cancellazione.</description>
     </item>
     

@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tail -f note.md</title>
-    <link>http://dimartinofrancesco.github.io/</link>
+    <link>https://dimartinofrancesco.github.io/</link>
     <description>Recent content on tail -f note.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-it</language>
     <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://dimartinofrancesco.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dimartinofrancesco.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Prestashop 1.7: cancellare le categorie orfane</title>
-      <link>http://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/</link>
+      <link>https://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/</link>
       <pubDate>Thu, 03 Sep 2020 01:30:28 +0200</pubDate>
       
-      <guid>http://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/</guid>
+      <guid>https://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/</guid>
       <description>Un elenco di query MySql per controllare l&amp;rsquo;esistenza di categorie orfane e le relative query per la cancellazione.</description>
     </item>
     
     <item>
       <title>Abilitare la webcam del MacBook Pro su Ubuntu 20.04</title>
-      <link>http://dimartinofrancesco.github.io/posts/macbook-webcam-ubutu-20/</link>
+      <link>https://dimartinofrancesco.github.io/posts/macbook-webcam-ubutu-20/</link>
       <pubDate>Wed, 02 Sep 2020 01:30:28 +0200</pubDate>
       
-      <guid>http://dimartinofrancesco.github.io/posts/macbook-webcam-ubutu-20/</guid>
+      <guid>https://dimartinofrancesco.github.io/posts/macbook-webcam-ubutu-20/</guid>
       <description>Sto migrando da OSX a Linux sul mio MacBook e questo è uno dei primi problemi che ho dovuto risolvere.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://dimartinofrancesco.github.io/about/</link>
+      <link>https://dimartinofrancesco.github.io/about/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://dimartinofrancesco.github.io/about/</guid>
+      <guid>https://dimartinofrancesco.github.io/about/</guid>
       <description>Appunti note e condivisioni di Francesco Di Martino
 Visita Linkedin per maggiori informazioni</description>
     </item>
     
     <item>
       <title>Front-end dev - da OSX a Linux</title>
-      <link>http://dimartinofrancesco.github.io/posts/front-end-migrare-da-osx-a-linux/</link>
+      <link>https://dimartinofrancesco.github.io/posts/front-end-migrare-da-osx-a-linux/</link>
       <pubDate>Tue, 01 Sep 2020 00:38:47 +0200</pubDate>
       
-      <guid>http://dimartinofrancesco.github.io/posts/front-end-migrare-da-osx-a-linux/</guid>
+      <guid>https://dimartinofrancesco.github.io/posts/front-end-migrare-da-osx-a-linux/</guid>
       <description>Il primo impatto con un desktop enviroment Linux Oggi tutti gli sviluppatori, anche quelli front-end, utilizzano il terminale e le più svariate CLI: caricano file, pacchettizzano progetti, configurano traspiler per compilare codice, per rilasciarlo e testarlo.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://dimartinofrancesco.github.io/archives/</link>
+      <link>https://dimartinofrancesco.github.io/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://dimartinofrancesco.github.io/archives/</guid>
+      <guid>https://dimartinofrancesco.github.io/archives/</guid>
       <description></description>
     </item>
     
