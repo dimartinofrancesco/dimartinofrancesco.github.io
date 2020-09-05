@@ -2,13 +2,12 @@
 
 <html lang="it-it">
     <head>
-	<meta name="generator" content="Hugo 0.68.3" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no"/>
 
-    <title>tail -f note.md</title>
+    <title>Alexa skill: apri il mio Treno! | tail -f note.md</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,8 +28,6 @@
     
     
  
-    
-    <link rel="alternate" type="application/rss+xml" href="https://dimartinofrancesco.github.io/index.xml" title="tail -f note.md" />
     
     
     
@@ -146,143 +143,74 @@
 
         <div id="content" class="content-container">
         
-<div class = "article-content">
-        
-        <div class="description">
-            <p>Appunti, note e aneddoti di uno sviluppatore.</p>
-        </div>
-        
-        
-        
-        
-        <article>
-            <h2>
-                <a href="https://dimartinofrancesco.github.io/posts/alexa-skill-il-mio-treno/">
-                    Alexa skill: apri il mio Treno!
-                </a>
-            </h2>
-            <div>
-                <p>Alexa apri il mio treno! Lo scorso anno Amazon decise di regalare un Amazon echo dot a chiunque avesse pubblicato almeno una skill.</p>
-                
-            </div>
-            <div class="post-footer">
-            <time>September 4, 2020</time>
 
-            
-            
-                
-                    <a class="tag" href="/tags/nodejs">#nodejs</a>
-                
-                    <a class="tag" href="/tags/dynamodb">#dynamoDB</a>
-                
-                    <a class="tag" href="/tags/alexa">#alexa</a>
-                
-                    <a class="tag" href="/tags/developer">#developer</a>
-                
-                    <a class="tag" href="/tags/ubuntu">#ubuntu</a>
-                
-                    <a class="tag" href="/tags/github">#github</a>
-                
-            
-            </div> 
-           
-        </article>
-        
-        <article>
-            <h2>
-                <a href="https://dimartinofrancesco.github.io/posts/prestashop-cancellare-categorie-orfane/">
-                    Prestashop 1.7: cancellare le categorie orfane
-                </a>
-            </h2>
-            <div>
-                <p>Un elenco di query MySql per controllare l&rsquo;esistenza di categorie orfane e le relative query per la cancellazione.</p>
-                
-            </div>
-            <div class="post-footer">
-            <time>September 3, 2020</time>
+<h1 class="post-title">Alexa skill: apri il mio Treno!</h1>
+    
+    <time>September 4, 2020</time>
+    
+    <div>
+        <p>
+        <h2 id="alexa-apri-il-mio-treno">Alexa apri il mio treno!</h2>
+<p>Lo scorso anno Amazon decise di regalare un Amazon echo dot a chiunque avesse pubblicato almeno una skill.
+Qualche settimana precedente decisi di andare al lavoro in treno.</p>
+<p>Queste sono le premesse che mi portarono a sviluppare, ed imparare a sviluppare, un skill per Alexa in meno di una settimana.</p>
+<p>Dopo 10 mesi la riscopro mettendo in ordine il mio account GitHub e mi chiedo &ldquo;perchè non renderla pubblica?&rdquo;</p>
+<p><img src="https://i.makeagif.com/media/5-04-2015/Cr_LOS.gif" alt="Amici miei - Schiaffi alla stazione"></p>
+<h2 id="la-skill-come-mvp">La skill come MVP</h2>
+<p><strong>Scenario:</strong> Un utente &ldquo;pendolare&rdquo; la mattina si sveglia e vuol sapere se il suo treno è in ritardo o soppresso e di quanto è in ritardo.</p>
+<p>La skill, al primo avvio, memorizza la stazione di partenza e di arrivo del pendolare in modo tale che quando l&rsquo;utente invocherà &ldquo;Alexa apri il mio treno&rdquo; la skill risponderà <strong>dicendo a che ora è il prossimo treno e se viaggia con ritardo</strong>.</p>
+<p><strong>La skill la è pubblica su Amazon qui: <a href="https://www.amazon.it/dp/B081PGHPJX/ref=sr_1_1?brr=1&amp;qid=1574117336&amp;rd=1&amp;s=digital-skills&amp;sr=1-1">https://www.amazon.it/dp/B081PGHPJX/&hellip;</a></strong></p>
+<h2 id="base-del-funzionamento">Base del funzionamento</h2>
+<p>Per conoscere lo <strong>stato del treno</strong> e calcolare la &ldquo;rotta&rdquo; l&rsquo;app si interfaccia con le API di <em>viaggiatreno.it</em> che vi assicuro essere, diciamo, <em>non standard</em>.</p>
+<p><strong>Le stazioni</strong> vengono pre caricate all&rsquo;interno del file models/it-IT.json. E&rsquo; possibile invocare TrainInfo.storeStationData() - commentato all&rsquo;interno del file di test lambda/custom/train-info-testing.js - per generare il file lambda/custom/stations.json e manualmente fare l&rsquo;update del file it-IT in models.</p>
+<p><strong>I dati degli utenti</strong> vengono memorizzati in un&rsquo;istanza di DynamoDB</p>
+<h2 id="prerequisiti-per-lesecuzione">Prerequisiti per l&rsquo;esecuzione</h2>
+<ul>
+<li>Alexa <a href="https://developer.amazon.com/en-US/docs/alexa/smapi/quick-start-alexa-skills-kit-command-line-interface.html">ASK CLI</a> / <code>npm install -g ask-cli</code></li>
+<li>Un account AWS ed un minimo di esperienza per la configurazione di un&rsquo;istanza <strong>DynamoDB</strong></li>
+</ul>
+<h2 id="deploy">Deploy</h2>
+<ul>
+<li>Aggiornare il file <code>.ask/config</code> con i dati della vostra skill</li>
+<li>Eseguire il deploy tramite CLI <code>ask deploy --target lambda</code> - Verrà automaticamente instanziata una <strong>lambda</strong> e create tutte le <strong>utterance</strong> necessarie.</li>
+</ul>
+<h2 id="repository">Repository</h2>
+<p>Ho fatto una copia del repository e reso pubblico su gitHub all&rsquo;indirizzo: <a href="https://github.com/dimartinofrancesco/alexa-skill-il-mio-treno">github.com/dimartinofrancesco/alexa-skill-il-mio-treno</a></p>
+<p>Se la utilizzate <strong>fate fork</strong> e magari se vi sentite buoni potete fare anche una <strong>pull request</strong> di un bugfix o di una nuova funzionalià</p>
+<h2 id="statistiche">Statistiche</h2>
+<p>Nel periodo pre-lockdown, ovvero dal 18/11/19 (data di pubblicazione) al 28/02/20, le statistiche sono state:</p>
+<h3 id="user-enablements">User Enablements</h3>
+<ul>
+<li>Total for Custom Range: 1,705</li>
+<li>Maximum per Day: 60</li>
+<li>Average per Day: 14.09</li>
+</ul>
 
-            
-            
-                
-                    <a class="tag" href="/tags/prestashop">#prestashop</a>
-                
-                    <a class="tag" href="/tags/categorie">#categorie</a>
-                
-                    <a class="tag" href="/tags/mysql">#mysql</a>
-                
-                    <a class="tag" href="/tags/developer">#developer</a>
-                
-            
-            </div> 
-           
-        </article>
-        
-        <article>
-            <h2>
-                <a href="https://dimartinofrancesco.github.io/posts/macbook-webcam-ubutu-20/">
-                    Abilitare la webcam del MacBook Pro su Ubuntu 20.04
-                </a>
-            </h2>
-            <div>
-                <p>Sto migrando da OSX a Linux sul mio MacBook e questo è uno dei primi problemi che ho dovuto risolvere.</p>
-                
-            </div>
-            <div class="post-footer">
-            <time>September 2, 2020</time>
-
-            
-            
-                
-                    <a class="tag" href="/tags/linux">#linux</a>
-                
-                    <a class="tag" href="/tags/webcam">#webcam</a>
-                
-                    <a class="tag" href="/tags/ubuntu">#ubuntu</a>
-                
-                    <a class="tag" href="/tags/developer">#developer</a>
-                
-            
-            </div> 
-           
-        </article>
-        
-        <article>
-            <h2>
-                <a href="https://dimartinofrancesco.github.io/posts/front-end-migrare-da-osx-a-linux/">
-                    Front-end dev - da OSX a Linux
-                </a>
-            </h2>
-            <div>
-                <p>Il primo impatto con un desktop enviroment Linux Oggi tutti gli sviluppatori, anche quelli front-end, utilizzano il terminale e le più svariate CLI: caricano file, pacchettizzano progetti, configurano traspiler per compilare codice, per rilasciarlo e testarlo.</p>
-                
-            </div>
-            <div class="post-footer">
-            <time>September 1, 2020</time>
-
-            
-            
-                
-                    <a class="tag" href="/tags/linux">#linux</a>
-                
-                    <a class="tag" href="/tags/osx">#osx</a>
-                
-                    <a class="tag" href="/tags/front-end">#front-end</a>
-                
-                    <a class="tag" href="/tags/developer">#developer</a>
-                
-                    <a class="tag" href="/tags/ubuntu">#ubuntu</a>
-                
-            
-            </div> 
-           
-        </article>
-        
+        </p>
     </div>
+    
+
+    
+
+    <div class="page-footer">
         
-        <div class="paginator">
+        <hr class="footer-divider">
         
+            <a class="tag" href="/tags/nodejs">#nodejs</a>
         
+            <a class="tag" href="/tags/dynamodb">#dynamoDB</a>
+        
+            <a class="tag" href="/tags/alexa">#alexa</a>
+        
+            <a class="tag" href="/tags/developer">#developer</a>
+        
+            <a class="tag" href="/tags/ubuntu">#ubuntu</a>
+        
+            <a class="tag" href="/tags/github">#github</a>
+        
+      
     </div>
+
 
         
 

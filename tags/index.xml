@@ -6,10 +6,64 @@
     <description>Recent content in Tags on tail -f note.md</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-it</language>
-    <lastBuildDate>Thu, 03 Sep 2020 01:30:28 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 01:23:14 +0200</lastBuildDate>
     
 	<atom:link href="https://dimartinofrancesco.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>alexa</title>
+      <link>https://dimartinofrancesco.github.io/tags/alexa/</link>
+      <pubDate>Fri, 04 Sep 2020 01:23:14 +0200</pubDate>
+      
+      <guid>https://dimartinofrancesco.github.io/tags/alexa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>developer</title>
+      <link>https://dimartinofrancesco.github.io/tags/developer/</link>
+      <pubDate>Fri, 04 Sep 2020 01:23:14 +0200</pubDate>
+      
+      <guid>https://dimartinofrancesco.github.io/tags/developer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dynamoDB</title>
+      <link>https://dimartinofrancesco.github.io/tags/dynamodb/</link>
+      <pubDate>Fri, 04 Sep 2020 01:23:14 +0200</pubDate>
+      
+      <guid>https://dimartinofrancesco.github.io/tags/dynamodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://dimartinofrancesco.github.io/tags/github/</link>
+      <pubDate>Fri, 04 Sep 2020 01:23:14 +0200</pubDate>
+      
+      <guid>https://dimartinofrancesco.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://dimartinofrancesco.github.io/tags/nodejs/</link>
+      <pubDate>Fri, 04 Sep 2020 01:23:14 +0200</pubDate>
+      
+      <guid>https://dimartinofrancesco.github.io/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://dimartinofrancesco.github.io/tags/ubuntu/</link>
+      <pubDate>Fri, 04 Sep 2020 01:23:14 +0200</pubDate>
+      
+      <guid>https://dimartinofrancesco.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>categorie</title>
@@ -17,15 +71,6 @@
       <pubDate>Thu, 03 Sep 2020 01:30:28 +0200</pubDate>
       
       <guid>https://dimartinofrancesco.github.io/tags/categorie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>developer</title>
-      <link>https://dimartinofrancesco.github.io/tags/developer/</link>
-      <pubDate>Thu, 03 Sep 2020 01:30:28 +0200</pubDate>
-      
-      <guid>https://dimartinofrancesco.github.io/tags/developer/</guid>
       <description></description>
     </item>
     
@@ -53,15 +98,6 @@
       <pubDate>Wed, 02 Sep 2020 01:30:28 +0200</pubDate>
       
       <guid>https://dimartinofrancesco.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>https://dimartinofrancesco.github.io/tags/ubuntu/</link>
-      <pubDate>Wed, 02 Sep 2020 01:30:28 +0200</pubDate>
-      
-      <guid>https://dimartinofrancesco.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
